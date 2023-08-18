@@ -1,0 +1,25 @@
+
+body {
+    background-color: aquamarine;
+}
+
+#Box {
+    height: 20rem;
+    background-color: blanchedalmond;
+}
+
+h1 {
+    color: black;
+    align-items: center;
+
+}
+
+p { 
+    color: antiquewhite;
+    align-items: center;
+}
+
+#Box2 {
+    height: 20rem;
+    background-color: blanchedalmond;
+}
