@@ -1,25 +1,40 @@
 
-body {
-    background-color: aquamarine;
+h1, h2 {
+    font-family: helvetica;
+    text-align: center;
+    color: white;
+
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: black;
 }
 
-#Box {
-    height: 20rem;
-    background-color: blanchedalmond;
-}
-
-h1 {
-    color: black;
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
-
+    flex-direction: column; /* Add this line to center-align the message vertically */
 }
-
-p { 
-    color: antiquewhite;
-    align-items: center;
+  
+canvas {
+    display: block;
+    position: absolute;
+    top: 500px; /* Place canvas at the vertical center of the screen */
+    left: 50%; /* Place canvas at the horizontal center of the screen */
+    transform: translate(-50%, -50%)
 }
-
-#Box2 {
-    height: 20rem;
-    background-color: blanchedalmond;
+  
+#message {
+    position: absolute;
+    font-family: helvetica;
+    top: 10%;
+    right: 40%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    z-index: 1; /* Ensure the message appears above the canvas */
 }
