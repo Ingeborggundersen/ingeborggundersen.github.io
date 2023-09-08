@@ -35,7 +35,7 @@
         }
 
         #date {
-            font-size: 18px;
+            font-size: 16px;
             margin-top: 10px;
         }
 
@@ -44,11 +44,20 @@
             font-size: 20px;
             margin-bottom: 20px;
         }
+
+        /* Style for the "Welcome to the Future" text */
+        #future {
+            color: #fff;
+            font-size: 16px;
+            margin-top: 10px;
+            display: none; /* Initially hidden */
+        }
     </style>
 </head>
 <body>
     <div id="welcome">Welcome to the Time Machine</div>
     <div id="watch">
+        <div id="future">Welcome to the Future!</div>
         <div id="time">00:00:00</div>
         <div id="date">January 01, 2023</div>
     </div>
@@ -57,7 +66,9 @@
         const watch = document.getElementById('watch');
         const timeElement = document.getElementById('time');
         const dateElement = document.getElementById('date');
+        const futureElement = document.getElementById('future'); // Added for the future message
         let currentTime = new Date();
+        let isFutureVisible = false;
 
         function updateWatch() {
             const options = { timeZone: 'America/Santiago', hour12: false };
@@ -68,11 +79,21 @@
 
             // Advance the time by 1 second
             currentTime.setTime(currentTime.getTime() + 1000);
+
+            // Check if the future message should be visible
+            if (isFutureVisible) {
+                futureElement.style.display = 'block';
+                watch.style.backgroundColor = 'red'; // Turn the clock red
+            } else {
+                futureElement.style.display = 'none';
+                watch.style.backgroundColor = '#333'; // Reset the clock's background color
+            }
         }
 
         watch.addEventListener('click', () => {
             // Advance the time by an arbitrary amount (e.g., 1 hour)
             currentTime.setTime(currentTime.getTime() + 3600000);
+            isFutureVisible = true; // Show the future message and turn the clock red
             updateWatch();
         });
 
@@ -84,4 +105,3 @@
     </script>
 </body>
 </html>
-
