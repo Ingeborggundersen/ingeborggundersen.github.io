@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Machine Watch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #watch {
+            width: 200px;
+            height: 200px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #time {
+            font-size: 36px;
+        }
+
+        #date {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        #welcome {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="welcome">Welcome to the Time Machine</div>
+    <div id="watch">
+        <div id="time">00:00:00</div>
+        <div id="date">January 01, 2023</div>
+    </div>
+
+    <script>
+        const watch = document.getElementById('watch');
+        const timeElement = document.getElementById('time');
+        const dateElement = document.getElementById('date');
+        let currentTime = new Date();
+
+        function updateWatch() {
+            const options = { timeZone: 'America/Santiago', hour12: false };
+            const timeString = currentTime.toLocaleTimeString('en-US', options);
+            const dateString = currentTime.toLocaleDateString('en-US', { dateStyle: 'long' });
+            timeElement.textContent = timeString;
+            dateElement.textContent = dateString;
+
+            // Advance the time by 1 second
+            currentTime.setTime(currentTime.getTime() + 1000);
+        }
+
+        watch.addEventListener('click', () => {
+            // Advance the time by an arbitrary amount (e.g., 1 hour)
+            currentTime.setTime(currentTime.getTime() + 3600000);
+            updateWatch();
+        });
+
+        // Initial update
+        updateWatch();
+
+        // Update the watch every second
+        setInterval(updateWatch, 1000);
+    </script>
+</body>
+</html>
+

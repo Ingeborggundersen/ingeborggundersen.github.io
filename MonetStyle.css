@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Set to your desired height */
+}
+
+#monetImage,
+#waterCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
