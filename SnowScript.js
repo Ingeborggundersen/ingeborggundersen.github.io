@@ -52,7 +52,7 @@ function draw() {
     clearCanvas();
     const centerX = canvas.width / 2;
     const centerY = (canvas.height / 2) + 100; // Adjust the Y offset here
-    const length = canvas.width * 0.25; // Decreased length
+    const length = canvas.width * 0.2; // Decreased length
     const angle = -Math.PI / 2;
 
     drawSnowflake(centerX, centerY, length, angle, recursionDepth);
