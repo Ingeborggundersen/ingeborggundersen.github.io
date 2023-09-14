@@ -1,7 +1,7 @@
 
-h1, h2 {
+h1, h2, p {
     font-family: helvetica;
-    text-align: center;
+    margin-left: 100px;
     color: white;
 
 }
@@ -28,6 +28,16 @@ canvas {
     left: 50%; /* Place canvas at the horizontal center of the screen */
     transform: translate(-50%, -50%)
 }
+
+.link-box {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    width: 200px;
+    margin-left: 100px;
+    
+}
+
   
 #message {
     position: absolute;
