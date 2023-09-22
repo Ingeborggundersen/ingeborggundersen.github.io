@@ -1,10 +1,13 @@
 
-h1, h2, p {
+h1, h2, p, a {
     font-family: helvetica;
-    margin-left: 100px;
-    color: white;
-
+    color: rgb(199, 199, 199);
 }
+
+h1, h2 {
+    margin-left: 100px;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -24,7 +27,7 @@ body, html {
 canvas {
     display: block;
     position: absolute;
-    top: 500px; /* Place canvas at the vertical center of the screen */
+    top: 400px; /* Place canvas at the vertical center of the screen */
     left: 50%; /* Place canvas at the horizontal center of the screen */
     transform: translate(-50%, -50%)
 }
@@ -32,7 +35,7 @@ canvas {
 .link-box {
     padding: 10px;
     margin: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #bcbcbc;
     width: 200px;
     margin-left: 100px;
     
@@ -41,10 +44,7 @@ canvas {
   
 #message {
     position: absolute;
-    font-family: helvetica;
-    top: 10%;
-    right: 40%;
+    right: 70%;
     transform: translateX(-50%);
-    font-size: 20px;
     z-index: 1; /* Ensure the message appears above the canvas */
 }
