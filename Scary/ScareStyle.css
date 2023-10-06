@@ -23,17 +23,16 @@ body, html {
     align-items: center;
     flex-direction: column; /* Add this line to center-align the message vertically */
 }
-
-.link-box {
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid #bcbcbc;
-    width: 200px;
-    margin-left: 100px;
-    
+  
+canvas {
+    display: block;
+    position: absolute;
+    top: 400px; /* Place canvas at the vertical center of the screen */
+    left: 50%; /* Place canvas at the horizontal center of the screen */
+    transform: translate(-50%, -50%)
 }
 
-
+  
 #message {
     position: absolute;
     right: 70%;
