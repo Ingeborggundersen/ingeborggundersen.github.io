@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+}
+
+#pulpContainer {
+    position: relative;
+    width: 30vw;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#pulpImage,
+#pulpOverlay {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#pulpOverlay {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
